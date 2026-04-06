@@ -1,5 +1,5 @@
 import React from 'react'
-import axios from "axios";
+   import api from "../api/axios";
 import { useNavigate } from "react-router-dom";
 const CreatePost = () => {
 
@@ -8,7 +8,9 @@ const CreatePost = () => {
     e.preventDefault()
 
     const formData =new FormData(e.target)
-    axios.post("http://localhost:3000/create-post", formData)
+
+
+api.post("/create-post", formData)
     .then((res)=>{
      navigate("/feed")
     })

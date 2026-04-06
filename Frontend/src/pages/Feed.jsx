@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
+
+import api from "../api/axios";
 const Feed = () => {
   const [posts, setPosts] = useState([
     {
@@ -13,7 +14,9 @@ const Feed = () => {
   useEffect(()=>{
 console.log("API calling...");
 
-    axios.get("http://localhost:3000/posts")
+   
+
+api.get("/posts")
     .then((res)=>{
         setPosts(res.data.posts);
         
