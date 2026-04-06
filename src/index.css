@@ -288,7 +288,7 @@ body,
   .create-post-section form {
     padding: 30px;
   }
-}
+
 
 @media (max-width: 640px) {
   .create-post-section {
